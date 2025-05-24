@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grove Street | First Drop</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('background.jpg') center/cover no-repeat fixed;
+      color: #fff;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      border-radius: 8px;
+      max-width: 500px;
+      width: 100%;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+
+    input[type="email"] {
+      padding: 10px;
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 15px;
+      border-radius: 4px;
+      border: none;
+      font-size: 1rem;
+    }
+
+    button {
+      background-color: #000;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #333;
+    }
+
+    .success-message {
+      display: none;
+      font-size: 1.1rem;
+      color: #0f0;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 400px) {
+      .container {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>WE OUTSIDE.</h1>
+    <p>Sign up for early access + 10% off your first order.</p>
+
+    <form id="signup-form">
+      <input type="email" name="email" placeholder="Email" required />
+      <button type="submit">Subscribe</button>
+    </form>
+
+    <div class="success-message" id="success-message">
+      You’re in. 🔥 Check your email for next steps.
+    </div>
+
+    <p style="margin-top: 30px; font-size: 0.9rem; color: #ccc;">
+      First drop coming soon. #GroveStreetCairo
+    </p>
+  </div>
+
+  <script>
+    document.getElementById("signup-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      document.getElementById("success-message").style.display = "block";
+    });
+  </script>
+</body>
+</html>
